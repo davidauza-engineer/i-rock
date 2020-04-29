@@ -13,6 +13,7 @@ class NewAchievementForm
     select('Public', from: 'Privacy')
     check('Featured achievement')
     attach_file('Cover image', "#{Rails.root}/spec/fixtures/cover_image.png")
+    fill_in('User', with: params.fetch(:user_id, '1'))
 
     self
   end

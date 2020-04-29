@@ -4,6 +4,7 @@
   <%= f.input :privacy, collection: Hash[ Achievement.privacies.map { |k, v| [ k.split('_').first.capitalize, k ] } ] %>
   <%= f.input :featured, label: 'Featured achievement' %>
   <%= f.input :cover_image, as: :file %>
+  <%= f.input :user_id %>
 
   <%= f.submit 'Create Achievement', class: 'btn btn-primary' %>
 <% end %>

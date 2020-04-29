@@ -21,8 +21,10 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootstrap-sass'
 # Simple Form
 gem 'simple_form'
-# Markdow library
+# Markdown library
 gem 'redcarpet'
+# Devise
+gem 'devise'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -38,6 +40,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
+  gem 'rails-controller-testing'
   gem 'factory_girl_rails'
   gem 'spring'
   gem 'spring-commands-rspec'
