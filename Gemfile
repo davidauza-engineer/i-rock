@@ -27,6 +27,8 @@ gem 'redcarpet'
 gem 'devise'
 # Carrierwave to manage file uploads
 gem 'carrierwave'
+# Twitter
+gem 'twitter'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -62,6 +64,8 @@ group :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'shoulda-matchers', require: false
+  gem 'vcr'
+  gem 'webmock'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

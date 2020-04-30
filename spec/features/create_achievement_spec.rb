@@ -11,7 +11,7 @@ feature 'create new achievement' do
     login_form.visit_page.login_as(user)
   end
 
-  scenario 'creante new achievement with valid data' do
+  scenario 'creante new achievement with valid data', :vcr do
     new_achievement_form.visit_page.fill_in_with(
       title: 'Read a book',
       user_id: 1,
@@ -25,6 +25,8 @@ feature 'create new achievement' do
 
     expect(page).to have_content('Achievement has been created')
     expect(Achievement.last.title).to eq('Read a book')
+
+    expect(page).to have_content("We tweeted for you! https://twitter.com")
   end
 
   scenario 'cannot create achievement with invalid data' do

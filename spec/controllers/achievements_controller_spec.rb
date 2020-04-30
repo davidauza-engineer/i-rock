@@ -96,7 +96,7 @@ describe AchievementsController do
     describe 'POST create' do
       let(:valid_data) { FactoryGirl.attributes_for(:public_achievement, user_id: user) }
 
-      context 'valid data' do
+      context 'valid data', :vcr do
         it 'redirects to achievements#show' do
           post :create, params: { achievement: valid_data }
           expect(response).to redirect_to(achievement_path(assigns[:achievement]))
