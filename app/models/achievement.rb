@@ -31,4 +31,7 @@ class Achievement < ApplicationRecord
   #     errors.add(:title, "you can't have two achievements with the same title")
   #   end
   # end
+
+  def self.get_public_achievements
+  end
 end
