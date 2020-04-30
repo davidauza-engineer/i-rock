@@ -17,6 +17,9 @@ feature 'create new achievement' do
       user_id: 1
     ).submit
 
+    expect(ActionMailer::Base.deliveries.count).to eq(1)
+    expect(ActionMailer::Base.deliveries.last.to).to include(user.email)
+    
     expect(page).to have_content('Achievement has been created')
     expect(Achievement.last.title).to eq('Read a book')
   end
