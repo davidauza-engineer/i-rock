@@ -25,6 +25,8 @@ gem 'simple_form'
 gem 'redcarpet'
 # Devise
 gem 'devise'
+# Carrierwave to manage file uploads
+gem 'carrierwave'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

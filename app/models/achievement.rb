@@ -11,6 +11,8 @@ class Achievement < ApplicationRecord
   }
   # validate :unique_title_for_one_user
 
+  mount_uploader :cover_image, CoverImageUploader
+
   def description_html
     Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(description)
   end
