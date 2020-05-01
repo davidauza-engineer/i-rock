@@ -2,3 +2,15 @@
 <div>
   <%= @achievement.description_html.html_safe %>
 </div>
+
+<div class="encouragement">
+  <h2>Encouragements <span id="encouragement-quantity"><%= @achievement.encouragements.count %></span></h2>
+
+  <ul>
+    <% @achievement.encouragements.each do |encouragement| %>
+      <li>Encouragement left by <%= encouragement.user.email %>: <%= encouragement.message %></li>
+    <% end %>
+  </ul>
+
+  <%= link_to 'Encourage', new_achievement_encouragement_path(@achievement), id: 'encourage-button' %>
+</div>

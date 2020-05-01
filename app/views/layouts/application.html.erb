@@ -28,6 +28,7 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav">
             <li><%= link_to 'New Achievement', new_achievement_path %></li>
+            <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
@@ -35,6 +36,10 @@
 
     <% if flash[:notice] %>
       <div class="alert alert-info"><%= flash[:notice] %></div>
+    <% end %>
+
+    <% if flash[:alert] %>
+      <div class="alert alert-danger"><%= flash[:alert] %></div>
     <% end %>
     
     <%= yield %>

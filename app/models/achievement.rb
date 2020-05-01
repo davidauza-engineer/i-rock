@@ -13,6 +13,8 @@ class Achievement < ApplicationRecord
 
   mount_uploader :cover_image, CoverImageUploader
 
+  has_many :encouragements
+
   def description_html
     Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(description)
   end
